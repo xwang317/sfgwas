@@ -8,5 +8,5 @@ output_dir = "out/party0"
 cache_dir = "cache/party0"
 
 ## Computational paramters
-local_num_threads = 4
-memory_limit = 40000000000
+local_num_threads = 1 #4
+memory_limit = 16000000000 #40000000000

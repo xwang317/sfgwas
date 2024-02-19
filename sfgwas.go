@@ -59,7 +59,6 @@ func RunGWAS() {
 
 	// Initialize protocol
 	prot := InitProtocol(CONFIG_PATH)
-
 	// Invoke memory manager
 	err, stopFn := watchdog.HeapDriven(prot.GetConfig().MemoryLimit, 40, watchdog.NewAdaptivePolicy(0.5))
 	if err != nil {
@@ -68,7 +67,8 @@ func RunGWAS() {
 	defer stopFn()
 
 	// Run protocol
-	prot.GWAS()
+	// prot.GWAS()
+	prot.ConversionTest()
 
 	prot.SyncAndTerminate(true)
 }
